@@ -1,10 +1,11 @@
 export default class ErrorRepository {
   constructor() {
-    this.mistakes = new Map();
-  }
-
-  add(key, value) {
-    this.mistakes.set(key, value);
+    this.mistakes = new Map([
+      ['001', 'Нет доступа к сети'],
+      ['003', 'Нет ответа от сервера'],
+      ['245', 'Некорректно введённое имя игрока'],
+      ['246', 'Сервер не отвечает'],
+    ]);
   }
 
   translate(code) {
